@@ -17,7 +17,7 @@ utils/ #modulo de utilidades para el proyecto
     __init__.py
     checker.py # script para validar ejercicios
 ```
-> Nota: en las subcarpetas dentro `ejercicios` cada carpeta tiene dos archivos: `solucion.py` y `test.py`. En `solucion.py` debes resolver el ejercicio para que se pueda hacer el test correctamente.
+> **Nota**: en las subcarpetas dentro `ejercicios` cada carpeta tiene dos archivos: `solucion.py` y `test.py`. En `solucion.py` debes resolver el ejercicio para que se pueda hacer el test correctamente.
 
 > Cuando se ejecuta un test, en la termina muestra el error y la razón por la cual el ejercicio no paso el test
 
