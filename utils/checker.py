@@ -105,18 +105,23 @@ def run_test(testModule: ModuleType):
     print_green("------------------------------------------------------")
 
     if result.wasSuccessful():
-        print_green("El ejercicio está correcto")
         return 0
     else:
-        print_yellow("El ejercicio no está correcto, revisa los errores anteriores")
         return 1
 
 
 def check_exercise():
     """Función principal para ejecutar el checker."""
     n = ask_number()
+    print('\n')
     test_file = load_test_file(n)
-    print_green("------------------------------------------------------")
-    if test_file is not None:
-        code = run_test(test_file)
-        sys.exit(code)
+
+    if test_file is None:
+        sys.exit(1)
+
+    test_result = run_test(test_file)
+    if test_result == 0:
+        print_green(f"Ejercicio {n} correcto")
+    else:
+        print_red(f"Ejercicio {n} incorrecto")
+    sys.exit(test_result)
